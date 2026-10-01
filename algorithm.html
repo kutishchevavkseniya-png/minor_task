@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение алгоритмической задачи</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link" href="index.html" aria-label="На главную Leo Wear">
+                <img src="images/logo.svg" alt="Логотип Leo Wear">
+                <span>Leo Wear</span>
+            </a>
+            <nav class="main-nav" aria-label="Основная навигация">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="sizes.html">Размеры</a>
+                <a href="order.html">Заказ</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="passport-dom.html">Считывание DOM</a>
+                <a href="passport-latin.html">Изменение кириллицы</a>
+                <a href="algorithm.html" aria-current="page">Алгоритмическая задача</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <h1>Решение алгоритмической задачи</h1>
+
+        <section id="condition">
+            <h2>Задача № 1014</h2>
+            <p>
+                Даны вещественные положительные числа a, b, c, d. Выясните, может ли
+                прямоугольник со сторонами a, b уместиться внутри прямоугольника со сторонами
+                c, d так, чтобы каждая сторона внутреннего прямоугольника была параллельна
+                или перпендикулярна стороне внешнего прямоугольника.
+            </p>
+            <p><strong>Логика:</strong> <code>(a &lt;= c &amp;&amp; b &lt;= d) || (b &lt;= c &amp;&amp; a &lt;= d)</code>.</p>
+        </section>
+
+        <p class="notice">
+            При отправке условие, числа и результат уходят стороннему сервису httpbin,
+            который показывает полученные поля. Не вводите личные данные.
+        </p>
+
+        <form id="algorithm-form" class="form-card" action="https://httpbin.org/get" method="get" target="_blank" rel="noopener">
+            <input type="hidden" name="task_number" value="1014">
+            <input type="hidden" name="task_condition" value="Проверить, помещается ли прямоугольник a×b в прямоугольник c×d без поворота или с поворотом на 90 градусов">
+            <input id="result-field" type="hidden" name="calculation_result" value="">
+
+            <div class="form-row">
+                <label for="a">Сторона a внутреннего прямоугольника</label>
+                <input id="a" name="a" type="number" step="any" min="0.0000001" placeholder="Например, 2" required>
+            </div>
+            <div class="form-row">
+                <label for="b">Сторона b внутреннего прямоугольника</label>
+                <input id="b" name="b" type="number" step="any" min="0.0000001" placeholder="Например, 3" required>
+            </div>
+            <div class="form-row">
+                <label for="c">Сторона c внешнего прямоугольника</label>
+                <input id="c" name="c" type="number" step="any" min="0.0000001" placeholder="Например, 4" required>
+            </div>
+            <div class="form-row">
+                <label for="d">Сторона d внешнего прямоугольника</label>
+                <input id="d" name="d" type="number" step="any" min="0.0000001" placeholder="Например, 5" required>
+            </div>
+
+            <p>
+                <button id="calculate-button" type="button">Вычислить</button>
+                <input id="send-result" type="submit" value="Отправить условие, данные и результат" disabled>
+            </p>
+            <p id="algorithm-result" class="result" aria-live="polite">Введите четыре положительных числа и нажмите «Вычислить».</p>
+        </form>
+
+        <section id="explanation">
+            <h2>Как работает решение</h2>
+            <ol>
+                <li>Проверяется вариант без поворота: <code>a &lt;= c &amp;&amp; b &lt;= d</code>.</li>
+                <li>Проверяется поворот на 90°: <code>b &lt;= c &amp;&amp; a &lt;= d</code>.</li>
+                <li>Если подходит хотя бы один вариант, прямоугольник помещается.</li>
+            </ol>
+            <p>Знак <code>&lt;=</code> допускает равенство размеров.</p>
+        </section>
+
+        <p><a href="#top">К началу страницы</a></p>
+    </main>
+
+    <footer class="site-footer">
+        <p>Учебный проект Leo Wear.</p>
+        <p><a href="index.html#about">О магазине</a> · <a href="index.html">Вернуться на главную</a></p>
+    </footer>
+</body>
+</html>

@@ -2,75 +2,82 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Каталог: Leo-Wear</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог — Leo Wear</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
 </head>
 <body>
-    <h1 id="top">Каталог Leo-Wear</h1>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link" href="index.html" aria-label="На главную Leo Wear">
+                <img src="images/logo.svg" alt="Логотип Leo Wear">
+                <span>Leo Wear</span>
+            </a>
+            <nav class="main-nav" aria-label="Основная навигация">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html" aria-current="page">Каталог</a>
+                <a href="sizes.html">Размеры</a>
+                <a href="order.html">Заказ</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="passport-dom.html">Считывание DOM</a>
+                <a href="passport-latin.html">Изменение кириллицы</a>
+                <a href="algorithm.html">Алгоритмическая задача</a>
+            </nav>
+        </div>
+    </header>
 
-    <nav>
-        <a href="index.html">Главная</a>
-        <a href="catalog.html" aria-current="page"><b>Каталог</b></a>
-        <a href="index.html#about">О магазине</a>
-    </nav>
+    <main id="top">
+        <h1>Каталог Leo Wear</h1>
+        <p class="lead">Три модели для прогулок в разную погоду.</p>
 
-    <h2>Одежда для вашего питомца</h2>
-    <p>Выберите категорию:</p>
+        <nav class="section-links" aria-label="Категории каталога">
+            <a href="#raincoats">Дождевики</a>
+            <a href="#sweaters">Свитеры</a>
+            <a href="#overalls">Комбинезоны</a>
+        </nav>
 
-    <ul>
-        <li><a href="#raincoats">Дождевики</a></li>
-        <li><a href="#sweaters">Свитеры</a></li>
-        <li><a href="#overalls">Комбинезоны</a></li>
-    </ul>
+        <section class="cards">
+            <article class="card" id="raincoats">
+                <h2>Дождевик «Облачко»</h2>
+                <figure>
+                    <a href="raincoat-photo.html" target="_blank" rel="noopener">
+                        <img class="thumbnail" src="images/raincoat.jpg" alt="Дождевик «Облачко» — открыть большое фото">
+                    </a>
+                    <figcaption>Миниатюра 100 px. Нажмите, чтобы открыть фото 600 × 400 px.</figcaption>
+                </figure>
+                <p>Лёгкий дождевик для прогулок в дождливую погоду. Застёжка позволяет быстро надеть его перед выходом.</p>
+                <p><strong>Учебная цена:</strong> 1 800 рублей.</p>
+            </article>
 
-    <h2 id="raincoats">Дождевики</h2>
-    <figure>
-        <a href="raincoat-photo.html" target="_blank" rel="noopener">
-            <img
-                src="images/raincoat.jpg"
-                alt="Дождевик «Облачко» — открыть большое фото"
-                width="100"
-            >
-        </a>
-        <figcaption>
-            Дождевик «Облачко». Нажмите на фото, чтобы увеличить.
-        </figcaption>
-    </figure>
-    <p>
-        Лёгкий дождевик «Облачко» для прогулок в дождливую погоду.
-        Застёжка позволяет быстро надеть его перед выходом.
-    </p>
-    <p>Цена: 1 800 рублей.</p>
+            <article class="card" id="sweaters">
+                <h2>Свитер «Тёплый друг»</h2>
+                <figure>
+                    <img class="product-image" src="images/sweater.jpg" alt="Собака в свитере «Тёплый друг»">
+                    <figcaption>Мягкий свитер для прохладной сухой погоды.</figcaption>
+                </figure>
+                <p>Модель с высоким воротником помогает сохранить тепло во время прогулки.</p>
+                <p><strong>Учебная цена:</strong> 1 500 рублей.</p>
+            </article>
 
-    <h2 id="sweaters">Свитеры</h2>
-    <figure>
-        <img
-            src="images/sweater.jpg"
-            alt="Собака в свитере «Тёплый друг»"
-            width="300"
-        >
-        <figcaption>Свитер «Тёплый друг» для прохладной погоды.</figcaption>
-    </figure>
-    <p>
-        Мягкий свитер «Тёплый друг» для прохладной сухой погоды.
-        Модель с высоким воротником.
-    </p>
-    <p>Цена: 1 500 рублей.</p>
+            <article class="card" id="overalls">
+                <h2>Комбинезон «Снежок»</h2>
+                <figure>
+                    <img class="product-image" src="images/overall.jpg" alt="Собака в зимнем комбинезоне «Снежок»">
+                    <figcaption>Утеплённый комбинезон для зимних прогулок.</figcaption>
+                </figure>
+                <p>Комбинезон закрывает спину, грудь и лапы питомца.</p>
+                <p><strong>Учебная цена:</strong> 2 900 рублей.</p>
+            </article>
+        </section>
 
-    <h2 id="overalls">Комбинезоны</h2>
-    <figure>
-        <img
-            src="images/overall.jpg"
-            alt="Собака в зимнем комбинезоне «Снежок»"
-            width="300"
-        >
-        <figcaption>Комбинезон «Снежок» для зимних прогулок.</figcaption>
-    </figure>
-    <p>
-        Утеплённый комбинезон «Снежок» для зимних прогулок.
-        Закрывает спину, грудь и лапы питомца.
-    </p>
-    <p>Цена: 2 900 рублей.</p>
+        <p><a class="button" href="order.html">Перейти к учебному заказу</a></p>
+        <p><a href="#top">К началу страницы</a></p>
+    </main>
 
-    <a href="#top">К началу страницы</a>
+    <footer class="site-footer">
+        <p>Учебный проект Leo Wear — реальные заказы не оформляются.</p>
+        <p><a href="index.html#about">О магазине</a> · <a href="index.html">Вернуться на главную</a></p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контактные данные — Leo Wear</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link" href="index.html" aria-label="На главную Leo Wear">
+                <img src="images/logo.svg" alt="Логотип Leo Wear">
+                <span>Leo Wear</span>
+            </a>
+            <nav class="main-nav" aria-label="Основная навигация">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="sizes.html">Размеры</a>
+                <a href="order.html">Заказ</a>
+                <a href="contacts.html" aria-current="page">Контакты</a>
+                <a href="passport-dom.html">Считывание DOM</a>
+                <a href="passport-latin.html">Изменение кириллицы</a>
+                <a href="algorithm.html">Алгоритмическая задача</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <h1>Форма контактных данных</h1>
+        <p class="lead">Учебная форма для демонстрации отправки данных на удалённый сервер.</p>
+        <p class="notice">
+            У магазина нет настоящих контактных реквизитов. Форма отправляет поля стороннему
+            учебному сервису httpbin. Вводите только вымышленные данные.
+        </p>
+
+        <form class="form-card" action="https://httpbin.org/get" method="get" target="_blank" rel="noopener">
+            <input type="hidden" name="form_type" value="student-contacts">
+
+            <div class="form-row">
+                <label for="last-name">Фамилия</label>
+                <input id="last-name" name="last_name" type="text" autocomplete="family-name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="first-name">Имя</label>
+                <input id="first-name" name="first_name" type="text" autocomplete="given-name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="group">Группа</label>
+                <input id="group" name="student_group" type="text" placeholder="Например, 1" required>
+            </div>
+
+            <div class="form-row">
+                <label for="mobile">Мобильный телефон</label>
+                <input id="mobile" name="mobile_phone" type="tel" pattern="[0-9+() -]{7,20}" placeholder="+7 000 000-00-00" autocomplete="tel" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Электронная почта</label>
+                <input id="email" name="email" type="email" placeholder="student@example.com" autocomplete="email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="message-date">Дата отправки сообщения</label>
+                <input id="message-date" name="message_date" type="date" required>
+            </div>
+
+            <p><input type="submit" value="Отправить тестовые данные"></p>
+        </form>
+
+        <p><a href="#top">К началу страницы</a></p>
+    </main>
+
+    <footer class="site-footer">
+        <p>Учебный проект Leo Wear — настоящих контактов и приёма заказов нет.</p>
+        <p><a href="index.html#about">О магазине</a> · <a href="index.html">Вернуться на главную</a></p>
+    </footer>
+</body>
+</html>

@@ -2,28 +2,41 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Дождевик «Облачко» — фото</title>
-
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        img {
-            object-fit: contain;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дождевик «Облачко» — большое фото</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
 </head>
 <body>
-    <img
-        src="images/raincoat.jpg"
-        alt="Собака в дождевике «Облачко»"
-        width="600"
-        height="400"
-    >
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link" href="index.html" aria-label="На главную Leo Wear">
+                <img src="images/logo.svg" alt="Логотип Leo Wear">
+                <span>Leo Wear</span>
+            </a>
+            <nav class="main-nav" aria-label="Основная навигация">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html" aria-current="page">Каталог</a>
+                <a href="sizes.html">Размеры</a>
+                <a href="order.html">Заказ</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="passport-dom.html">Считывание DOM</a>
+                <a href="passport-latin.html">Изменение кириллицы</a>
+                <a href="algorithm.html">Алгоритмическая задача</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="photo-viewer" id="top">
+        <h1>Дождевик «Облачко»</h1>
+        <img class="large-photo" src="images/raincoat.jpg" alt="Собака в дождевике «Облачко»" width="600" height="400">
+        <p>Изображение помещено по центру в область 600 × 400 px без искажения пропорций.</p>
+        <p><a class="button button-secondary" href="catalog.html#raincoats">Вернуться в каталог</a></p>
+    </main>
+
+    <footer class="site-footer">
+        <p>Учебный проект Leo Wear.</p>
+        <p><a href="index.html">Вернуться на главную</a></p>
+    </footer>
 </body>
 </html>

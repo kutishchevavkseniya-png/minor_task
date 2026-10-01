@@ -2,58 +2,98 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Leo-Wear — магазин одежды для собак</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Wear — одежда для собак</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
 </head>
 <body>
-    <nav>
-        <a href="index.html" aria-current="page"><b>Главная</b></a>
-        <a href="catalog.html">Каталог</a>
-        <a href="sizes.html">Размеры</a>
-        <a href="index.html#about">О магазине</a>
-    </nav>
-    <h1 id="top">Leo-Wear</h1>
-    <p>Магазин удобной одежды для собак.</p>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link" href="index.html" aria-label="На главную Leo Wear">
+                <img src="images/logo.svg" alt="Логотип Leo Wear">
+                <span>Leo Wear</span>
+            </a>
+            <nav class="main-nav" aria-label="Основная навигация">
+                <a href="index.html" aria-current="page">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="sizes.html">Размеры</a>
+                <a href="order.html">Заказ</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="passport-dom.html">Считывание DOM</a>
+                <a href="passport-latin.html">Изменение кириллицы</a>
+                <a href="algorithm.html">Алгоритмическая задача</a>
+            </nav>
+        </div>
+    </header>
 
-    <nav>
-        <a href="#about">О магазине</a>
-        <a href="#catalog">Наш ассортимент</a>
-        <a href="#advantages">Наши преимущества</a>
-    </nav>
+    <main id="top">
+        <h1>Одежда для маленьких собак</h1>
+        <p class="lead">
+            Leo Wear помогает подобрать удобную одежду для прогулок, отдыха и поездок
+            вместе с питомцем.
+        </p>
+        <p class="notice">Leo Wear — учебный проект. Реальные заказы на сайте не оформляются.</p>
 
-    <h2 id="about">О магазине</h2>
-    <p>
-        Leo Wear — магазин одежды для собак.
-        Мы помогаем подобрать вещи для прогулок,
-        отдыха и поездок вместе с питомцем.
-    </p>
+        <nav class="section-links" aria-label="Разделы главной страницы">
+            <a href="#about">О магазине</a>
+            <a href="#assortment">Ассортимент</a>
+            <a href="#advantages">Преимущества</a>
+            <a href="#choice">Как выбрать одежду</a>
+        </nav>
 
-    <h2 id="catalog">Наш ассортимент</h2>
-    <ul>
-        <li>
-            Одежда для прохладной погоды
+        <section id="about">
+            <h2>О магазине</h2>
+            <p>
+                Leo Wear — учебный магазин одежды для собак небольших пород. Здесь можно
+                познакомиться с ассортиментом, изучить пример размерной сетки и отправить
+                тестовый заказ на учебный сервер.
+            </p>
+        </section>
+
+        <section id="assortment">
+            <h2>Наш ассортимент</h2>
             <ul>
-                <li>Свитеры</li>
-                <li>Толстовки</li>
+                <li>
+                    Одежда для прохладной погоды
+                    <ul>
+                        <li>свитеры;</li>
+                        <li>толстовки.</li>
+                    </ul>
+                </li>
+                <li>дождевики;</li>
+                <li>зимние комбинезоны.</li>
             </ul>
-        </li>
-        <li>Дождевики</li>
-        <li>Зимние комбинезоны</li>
-    </ul>
+            <p><a class="button" href="catalog.html">Перейти в каталог</a></p>
+        </section>
 
-    <h2 id="advantages">Наши преимущества</h2>
-    <ul>
-        <li>Одежда для собак небольших пород.</li>
-        <li>Рекомендации по выбору размера.</li>
-        <li>Модели для разных сезонов.</li>
-    </ul>
+        <section id="advantages">
+            <h2>Наши преимущества</h2>
+            <ul>
+                <li>модели для собак небольших пород;</li>
+                <li>понятные рекомендации по выбору размера;</li>
+                <li>одежда для разных сезонов и погоды.</li>
+            </ul>
+        </section>
 
-    <h2>Как выбрать одежду</h2>
-    <ol>
-        <li>Измерьте длину спины, обхват груди и шеи собаки.</li>
-        <li>Сравните мерки с таблицей размеров выбранной модели.</li>
-        <li>Выберите одежду с учётом погоды и активности питомца.</li>
-    </ol>
+        <section id="choice">
+            <h2>Как выбрать одежду</h2>
+            <ol>
+                <li>Измерьте длину спины, обхват груди и шеи собаки.</li>
+                <li>Сравните мерки с <a href="sizes.html#size-table">таблицей размеров</a>.</li>
+                <li>Выберите одежду с учётом погоды и активности питомца.</li>
+            </ol>
+        </section>
 
-    <a href="#top">К началу страницы</a>
+        <p><a href="#top">К началу страницы</a></p>
+    </main>
+
+    <footer class="site-footer">
+        <p>Учебный проект Leo Wear — реальные заказы не оформляются.</p>
+        <p>
+            <a href="index.html#about">О магазине</a> ·
+            <a href="https://www.akc.org/expert-advice/lifestyle/does-my-dog-need-winter-coat/" target="_blank" rel="noopener">Материал о выборе одежды для собак</a>
+        </p>
+    </footer>
 </body>
 </html>

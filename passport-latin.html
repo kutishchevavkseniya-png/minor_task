@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменяем кириллицу на латиницу по клику</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link" href="index.html" aria-label="На главную Leo Wear">
+                <img src="images/logo.svg" alt="Логотип Leo Wear">
+                <span>Leo Wear</span>
+            </a>
+            <nav class="main-nav" aria-label="Основная навигация">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="sizes.html">Размеры</a>
+                <a href="order.html">Заказ</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="passport-dom.html">Считывание DOM</a>
+                <a href="passport-latin.html" aria-current="page">Изменение кириллицы</a>
+                <a href="algorithm.html">Алгоритмическая задача</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <h1>Изменяем кириллицу на латиницу по клику</h1>
+        <p class="notice">
+            Учебный макет. Фамилия и имя изменяются с кириллицы на латиницу через JavaScript.
+            Настоящие номер паспорта, адрес и другие чувствительные реквизиты не используются.
+        </p>
+
+        <div class="passport-grid">
+            <section class="passport" aria-label="Вторая страница учебного паспорта">
+                <h2>Вторая страница</h2>
+                <p><span class="passport-label">Выдан</span> Учебным отделом</p>
+                <p><span class="passport-label">Дата выдачи</span> 01.01.2026</p>
+                <p><span class="passport-label">Код подразделения</span> 000-000</p>
+                <p><span class="passport-label">Личная подпись</span> Учебный образец</p>
+            </section>
+
+            <section class="passport" aria-label="Третья страница учебного паспорта">
+                <h2>Третья страница</h2>
+                <p><span class="passport-label">Фамилия</span> <span id="passport-surname">Кутищева</span></p>
+                <p><span class="passport-label">Имя</span> <span id="passport-name">Ксения</span></p>
+                <p><span class="passport-label">Отчество</span> Учебное</p>
+                <p><span class="passport-label">Пол</span> —</p>
+                <p><span class="passport-label">Дата рождения</span> 01.08.<span id="passport-year">2007</span></p>
+                <p><span class="passport-label">Место рождения</span> Учебный город</p>
+            </section>
+        </div>
+
+        <p>
+            <button id="to-latin" type="button">Показать латиницей</button>
+            <button id="to-russian" class="button-secondary" type="button">Вернуть кириллицу</button>
+        </p>
+        <p class="help">
+            JavaScript находит элементы по <code>id</code> и меняет их <code>textContent</code>.
+            Год остаётся цифрами: у цифр нет кириллического и латинского варианта.
+        </p>
+
+        <p><a href="#top">К началу страницы</a></p>
+    </main>
+
+    <footer class="site-footer">
+        <p>Учебный проект Leo Wear.</p>
+        <p><a href="index.html#about">О магазине</a> · <a href="index.html">Вернуться на главную</a></p>
+    </footer>
+</body>
+</html>

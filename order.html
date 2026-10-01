@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный заказ — Leo Wear</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link" href="index.html" aria-label="На главную Leo Wear">
+                <img src="images/logo.svg" alt="Логотип Leo Wear">
+                <span>Leo Wear</span>
+            </a>
+            <nav class="main-nav" aria-label="Основная навигация">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="sizes.html">Размеры</a>
+                <a href="order.html" aria-current="page">Заказ</a>
+                <a href="contacts.html">Контакты</a>
+                <a href="passport-dom.html">Считывание DOM</a>
+                <a href="passport-latin.html">Изменение кириллицы</a>
+                <a href="algorithm.html">Алгоритмическая задача</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <h1>Учебная форма заказа</h1>
+        <p class="lead">Заполните пример заказа одежды для питомца.</p>
+        <p class="notice">
+            Реальный заказ не оформляется. Данные отправляются стороннему учебному сервису
+            httpbin, который только показывает полученные поля. Используйте вымышленные данные.
+        </p>
+
+        <form class="form-card" action="https://httpbin.org/get" method="get" target="_blank" rel="noopener">
+            <input type="hidden" name="order_source" value="leo-wear-study-site">
+
+            <div class="form-row">
+                <label for="pet-name">Имя питомца</label>
+                <input id="pet-name" name="pet_name" type="text" value="Лео" required>
+            </div>
+
+            <div class="form-row">
+                <label for="product">Товар</label>
+                <select id="product" name="product" required>
+                    <option value="raincoat-cloud" selected>Дождевик «Облачко»</option>
+                    <option value="sweater-friend">Свитер «Тёплый друг»</option>
+                    <option value="overall-snowball">Комбинезон «Снежок»</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="size">Размер</label>
+                <select id="size" name="size" required>
+                    <option value="XS">XS</option>
+                    <option value="S" selected>S</option>
+                    <option value="M">M</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="quantity">Количество</label>
+                <input id="quantity" name="quantity" type="number" value="1" min="1" max="10" required>
+            </div>
+
+            <fieldset>
+                <legend>Способ получения</legend>
+                <label class="choice" for="pickup">
+                    <input id="pickup" name="delivery" type="radio" value="pickup" checked>
+                    Учебный самовывоз
+                </label>
+                <label class="choice" for="courier">
+                    <input id="courier" name="delivery" type="radio" value="courier">
+                    Учебная доставка
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Дополнительные опции</legend>
+                <label class="choice" for="gift-wrap">
+                    <input id="gift-wrap" name="options" type="checkbox" value="gift-wrap" checked>
+                    Подарочная упаковка
+                </label>
+                <label class="choice" for="size-note">
+                    <input id="size-note" name="options" type="checkbox" value="size-note">
+                    Памятка по размеру
+                </label>
+            </fieldset>
+
+            <div class="form-row">
+                <label for="order-date">Желаемая дата</label>
+                <input id="order-date" name="desired_date" type="date" value="2026-10-15" min="2026-10-01" required>
+            </div>
+
+            <div class="form-row">
+                <label for="study-code">Учебный код заказа</label>
+                <input id="study-code" name="study_order_code" type="password" value="demo-1014" minlength="4" required>
+                <p class="help">
+                    Это не настоящий пароль. Тип <code>password</code> скрывает символы на экране,
+                    но сам по себе не шифрует и не защищает отправляемые данные.
+                </p>
+            </div>
+
+            <p>
+                <input type="reset" value="Вернуть значения по умолчанию">
+                <input type="submit" value="Отправить учебный заказ">
+            </p>
+        </form>
+
+        <p><a href="#top">К началу страницы</a></p>
+    </main>
+
+    <footer class="site-footer">
+        <p>Учебный проект Leo Wear — реальные заказы не оформляются.</p>
+        <p><a href="index.html#about">О магазине</a> · <a href="index.html">Вернуться на главную</a></p>
+    </footer>
+</body>
+</html>
