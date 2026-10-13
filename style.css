@@ -117,19 +117,13 @@ h2 {
     font-size: 1.15rem;
 }
 
-.notice,
 .card,
 .form-card,
-.passport,
-.screenshot-note {
+.passport {
     padding: 20px;
     border: 1px solid var(--border);
     border-radius: 14px;
     background: var(--surface);
-}
-
-.notice {
-    border-left: 5px solid var(--accent);
 }
 
 .section-links {
@@ -249,11 +243,6 @@ legend {
     margin: 8px 0;
 }
 
-.help {
-    color: var(--muted);
-    font-size: 0.94rem;
-}
-
 .table-wrapper {
     overflow-x: auto;
 }
@@ -297,11 +286,6 @@ td {
     color: var(--muted);
     font-size: 0.85rem;
     text-transform: uppercase;
-}
-
-.placeholder {
-    color: var(--error);
-    font-weight: 700;
 }
 
 code,

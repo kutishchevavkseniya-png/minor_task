@@ -30,13 +30,9 @@
 
     <main id="top">
         <h1>Изменяем кириллицу на латиницу по клику</h1>
-        <p class="notice">
-            Учебный макет. Фамилия и имя изменяются с кириллицы на латиницу через JavaScript.
-            Настоящие номер паспорта, адрес и другие чувствительные реквизиты не используются.
-        </p>
 
         <div class="passport-grid">
-            <section class="passport" aria-label="Вторая страница учебного паспорта">
+            <section class="passport" aria-label="Вторая страница паспорта">
                 <h2>Вторая страница</h2>
                 <p><span class="passport-label">Выдан</span> Учебным отделом</p>
                 <p><span class="passport-label">Дата выдачи</span> 01.01.2026</p>
@@ -44,7 +40,7 @@
                 <p><span class="passport-label">Личная подпись</span> Учебный образец</p>
             </section>
 
-            <section class="passport" aria-label="Третья страница учебного паспорта">
+            <section class="passport" aria-label="Третья страница паспорта">
                 <h2>Третья страница</h2>
                 <p><span class="passport-label">Фамилия</span> <span id="passport-surname">Кутищева</span></p>
                 <p><span class="passport-label">Имя</span> <span id="passport-name">Ксения</span></p>
@@ -59,17 +55,17 @@
             <button id="to-latin" type="button">Показать латиницей</button>
             <button id="to-russian" class="button-secondary" type="button">Вернуть кириллицу</button>
         </p>
-        <p class="help">
-            JavaScript находит элементы по <code>id</code> и меняет их <code>textContent</code>.
-            Год остаётся цифрами: у цифр нет кириллического и латинского варианта.
-        </p>
 
         <p><a href="#top">К началу страницы</a></p>
     </main>
 
     <footer class="site-footer">
-        <p>Учебный проект Leo Wear.</p>
-        <p><a href="index.html#about">О магазине</a> · <a href="index.html">Вернуться на главную</a></p>
+        <p>Leo Wear — одежда для собак.</p>
+        <nav aria-label="Дополнительная навигация">
+            <a href="index.html#about">О магазине</a> ·
+            <a href="index.html">На главную</a> ·
+            <a href="https://www.akc.org/expert-advice/lifestyle/does-my-dog-need-winter-coat/" target="_blank" rel="noopener">О выборе одежды для собак</a>
+        </nav>
     </footer>
 </body>
 </html>

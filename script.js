@@ -9,19 +9,22 @@ function setupPassportButtons() {
     const russianButton = document.getElementById("to-russian");
     const surname = document.getElementById("passport-surname");
     const firstName = document.getElementById("passport-name");
+    const year = document.getElementById("passport-year");
 
-    if (!latinButton || !russianButton || !surname || !firstName) {
+    if (!latinButton || !russianButton || !surname || !firstName || !year) {
         return;
     }
 
     latinButton.addEventListener("click", function () {
         surname.textContent = "Kutishcheva";
         firstName.textContent = "Kseniya";
+        year.textContent = "MMVII";
     });
 
     russianButton.addEventListener("click", function () {
         surname.textContent = "Кутищева";
         firstName.textContent = "Ксения";
+        year.textContent = "2007";
     });
 }
 

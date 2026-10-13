@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Учебный заказ — Leo Wear</title>
+    <title>Заказ — Leo Wear</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
 </head>
@@ -28,15 +28,11 @@
     </header>
 
     <main id="top">
-        <h1>Учебная форма заказа</h1>
-        <p class="lead">Заполните пример заказа одежды для питомца.</p>
-        <p class="notice">
-            Реальный заказ не оформляется. Данные отправляются стороннему учебному сервису
-            httpbin, который только показывает полученные поля. Используйте вымышленные данные.
-        </p>
+        <h1>Оформление заказа</h1>
+        <p class="lead">Выберите одежду, размер и способ получения.</p>
 
         <form class="form-card" action="https://httpbin.org/get" method="get" target="_blank" rel="noopener">
-            <input type="hidden" name="order_source" value="leo-wear-study-site">
+            <input type="hidden" name="order_source" value="leo-wear">
 
             <div class="form-row">
                 <label for="pet-name">Имя питомца</label>
@@ -70,11 +66,11 @@
                 <legend>Способ получения</legend>
                 <label class="choice" for="pickup">
                     <input id="pickup" name="delivery" type="radio" value="pickup" checked>
-                    Учебный самовывоз
+                    Самовывоз
                 </label>
                 <label class="choice" for="courier">
                     <input id="courier" name="delivery" type="radio" value="courier">
-                    Учебная доставка
+                    Доставка курьером
                 </label>
             </fieldset>
 
@@ -96,17 +92,13 @@
             </div>
 
             <div class="form-row">
-                <label for="study-code">Учебный код заказа</label>
-                <input id="study-code" name="study_order_code" type="password" value="demo-1014" minlength="4" required>
-                <p class="help">
-                    Это не настоящий пароль. Тип <code>password</code> скрывает символы на экране,
-                    но сам по себе не шифрует и не защищает отправляемые данные.
-                </p>
+                <label for="order-code">Код заказа</label>
+                <input id="order-code" name="order_code" type="password" value="demo-1014" minlength="4" required>
             </div>
 
             <p>
                 <input type="reset" value="Вернуть значения по умолчанию">
-                <input type="submit" value="Отправить учебный заказ">
+                <input type="submit" value="Отправить заказ">
             </p>
         </form>
 
@@ -114,8 +106,12 @@
     </main>
 
     <footer class="site-footer">
-        <p>Учебный проект Leo Wear — реальные заказы не оформляются.</p>
-        <p><a href="index.html#about">О магазине</a> · <a href="index.html">Вернуться на главную</a></p>
+        <p>Leo Wear — одежда для собак.</p>
+        <nav aria-label="Дополнительная навигация">
+            <a href="index.html#about">О магазине</a> ·
+            <a href="index.html">На главную</a> ·
+            <a href="https://www.akc.org/expert-advice/lifestyle/does-my-dog-need-winter-coat/" target="_blank" rel="noopener">О выборе одежды для собак</a>
+        </nav>
     </footer>
 </body>
 </html>

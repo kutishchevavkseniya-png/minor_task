@@ -29,13 +29,9 @@
 
     <main id="top">
         <h1>DOM_JS. Считываем информацию из DOM</h1>
-        <p class="notice">
-            Это учебный макет, а не настоящий паспорт. Номер паспорта, адрес и другие
-            чувствительные реквизиты здесь не используются.
-        </p>
 
         <div class="passport-grid">
-            <section class="passport" aria-label="Вторая страница учебного паспорта">
+            <section class="passport" aria-label="Вторая страница паспорта">
                 <h2>Вторая страница</h2>
                 <p><span class="passport-label">Выдан</span> Учебным отделом</p>
                 <p><span class="passport-label">Дата выдачи</span> 01.01.2026</p>
@@ -43,7 +39,7 @@
                 <p><span class="passport-label">Личная подпись</span> Учебный образец</p>
             </section>
 
-            <section class="passport" aria-label="Третья страница учебного паспорта">
+            <section class="passport" aria-label="Третья страница паспорта">
                 <h2>Третья страница</h2>
                 <p><span class="passport-label">Фамилия</span> <span id="passport-surname">Кутищева</span></p>
                 <p><span class="passport-label">Имя</span> <span id="passport-name">Ксения</span></p>
@@ -63,23 +59,26 @@ document.getElementById('passport-year').textContent</code></pre>
             <p>Каждая команда получает текст соответствующего элемента из DOM.</p>
         </section>
 
-        <section class="screenshot-note">
-            <h2>Место для скриншота</h2>
-            <p>
-                После заполнения данных выполните три команды, сделайте скриншот браузера
-                вместе с консолью и сохраните его как <code>images/dom-console.png</code>.
-                Затем добавьте сюда тег:
-            </p>
-            <pre><code>&lt;img src="images/dom-console.png" alt="Получение фамилии, имени и года рождения из DOM"&gt;</code></pre>
-            <p>Сейчас картинка намеренно не подключена, чтобы на странице не было битого изображения.</p>
+        <section id="dom-screenshot">
+            <h2>Получение данных из DOM</h2>
+            <figure>
+                <a href="images/dom-console.png" target="_blank" rel="noopener">
+                    <img src="images/dom-console.png" alt="Консоль браузера: получение фамилии Кутищева, имени Ксения и года рождения 2007 из DOM" style="display: block; width: 100%; height: auto;">
+                </a>
+                <figcaption>Результаты чтения фамилии, имени и года рождения. Нажмите на скриншот, чтобы увеличить.</figcaption>
+            </figure>
         </section>
 
         <p><a href="#top">К началу страницы</a></p>
     </main>
 
     <footer class="site-footer">
-        <p>Учебный проект Leo Wear.</p>
-        <p><a href="index.html#about">О магазине</a> · <a href="index.html">Вернуться на главную</a></p>
+        <p>Leo Wear — одежда для собак.</p>
+        <nav aria-label="Дополнительная навигация">
+            <a href="index.html#about">О магазине</a> ·
+            <a href="index.html">На главную</a> ·
+            <a href="https://www.akc.org/expert-advice/lifestyle/does-my-dog-need-winter-coat/" target="_blank" rel="noopener">О выборе одежды для собак</a>
+        </nav>
     </footer>
 </body>
 </html>
