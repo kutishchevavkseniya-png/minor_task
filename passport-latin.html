@@ -31,24 +31,17 @@
     <main id="top">
         <h1>Изменяем кириллицу на латиницу по клику</h1>
 
-        <div class="passport-grid">
-            <section class="passport" aria-label="Вторая страница паспорта">
-                <h2>Вторая страница</h2>
-                <p><span class="passport-label">Выдан</span> Учебным отделом</p>
-                <p><span class="passport-label">Дата выдачи</span> 01.01.2026</p>
-                <p><span class="passport-label">Код подразделения</span> 000-000</p>
-                <p><span class="passport-label">Личная подпись</span> КАК</p>
-            </section>
-
-            <section class="passport" aria-label="Третья страница паспорта">
-                <h2>Третья страница</h2>
-                <p><span class="passport-label">Фамилия</span> <span id="passport-surname">Кутищева</span></p>
-                <p><span class="passport-label">Имя</span> <span id="passport-name">Ксения</span></p>
-                <p><span class="passport-label">Отчество</span> <span id="passport-patronymic">Андреевна</span></p>
-                <p><span class="passport-label">Пол</span> —</p>
-                <p><span class="passport-label">Дата рождения</span> 01.08.<span id="passport-year">2007</span></p>
-                <p><span class="passport-label">Место рождения</span> Москва</p>
-            </section>
+        <div class="passport-spread" role="group" aria-label="Вторая и третья страницы паспорта">
+            <p class="passport-data passport-issuer">Учебным отделом</p>
+            <p class="passport-data passport-issue-date">01.01.2026</p>
+            <p class="passport-data passport-department">000-000</p>
+            <p class="passport-data passport-signature">КАК</p>
+            <p class="passport-data passport-surname"><span id="passport-surname">Кутищева</span></p>
+            <p class="passport-data passport-name"><span id="passport-name">Ксения</span></p>
+            <p class="passport-data passport-patronymic"><span id="passport-patronymic">Андреевна</span></p>
+            <p class="passport-data passport-gender">—</p>
+            <p class="passport-data passport-birth">01.08.<span id="passport-year">2007</span></p>
+            <p class="passport-data passport-place">Москва</p>
         </div>
 
         <p>
