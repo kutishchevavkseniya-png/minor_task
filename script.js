@@ -8,22 +8,25 @@ function setupPassportButtons() {
     const russianButton = document.getElementById("to-russian");
     const surname = document.getElementById("passport-surname");
     const firstName = document.getElementById("passport-name");
+    const patronymic = document.getElementById("passport-patronymic");
     const year = document.getElementById("passport-year");
 
-    if (!latinButton || !russianButton || !surname || !firstName || !year) {
-        return;
+    if (!latinButton || !russianButton || !surname || !firstName || !year || !patronymic) {
+    return;
     }
 
     latinButton.addEventListener("click", function () {
-        surname.textContent = "Kutishcheva";
-        firstName.textContent = "Kseniya";
-        year.textContent = "MMVII";
+    surname.textContent = "Kutishcheva";
+    firstName.textContent = "Kseniya";
+    patronymic.textContent = "Andreevna";
+    year.textContent = "MMVII";
     });
 
     russianButton.addEventListener("click", function () {
-        surname.textContent = "Кутищева";
-        firstName.textContent = "Ксения";
-        year.textContent = "2007";
+    surname.textContent = "Кутищева";
+    firstName.textContent = "Ксения";
+    patronymic.textContent = "Андреевна";
+    year.textContent = "2007";
     });
 }
 
