@@ -1,4 +1,3 @@
-// Все обработчики запускаются после загрузки HTML-разметки.
 document.addEventListener("DOMContentLoaded", function () {
     setupPassportButtons();
     setupAlgorithm();
@@ -96,7 +95,7 @@ function setupAlgorithm() {
 
     calculateButton.addEventListener("click", calculateResult);
 
-    // Перед отправкой результат вычисляется ещё раз, поэтому устаревшее значение не уйдёт на сервер.
+    
     form.addEventListener("submit", function (event) {
         if (!calculateResult()) {
             event.preventDefault();
