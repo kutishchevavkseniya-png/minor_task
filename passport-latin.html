@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Изменяем кириллицу на латиницу по клику</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
     <script src="script.js" defer></script>
 </head>
@@ -36,17 +36,28 @@
             <p class="passport-data passport-issue-date">01.01.2026</p>
             <p class="passport-data passport-department">000-000</p>
             <p class="passport-data passport-signature">КАК</p>
-            <p class="passport-data passport-surname"><span id="passport-surname">Кутищева</span></p>
-            <p class="passport-data passport-name"><span id="passport-name">Ксения</span></p>
-            <p class="passport-data passport-patronymic"><span id="passport-patronymic">Андреевна</span></p>
-            <p class="passport-data passport-gender">—</p>
-            <p class="passport-data passport-birth">01.08.<span id="passport-year">2007</span></p>
+
+            <p class="passport-data passport-surname">
+                <span id="passport-surname">Кутищева</span>
+            </p>
+            <p class="passport-data passport-name">
+                <span id="passport-name">Ксения</span>
+            </p>
+            <p class="passport-data passport-patronymic">
+                <span id="passport-patronymic">Андреевна</span>
+            </p>
+            <p class="passport-data passport-gender">Жен.</p>
+            <p class="passport-data passport-birth">
+                01.08.<span id="passport-year">2007</span>
+            </p>
             <p class="passport-data passport-place">Москва</p>
         </div>
 
         <p>
             <button id="to-latin" type="button">Показать латиницей</button>
-            <button id="to-russian" class="button-secondary" type="button">Вернуть кириллицу</button>
+            <button id="to-russian" class="button-secondary" type="button">
+                Вернуть кириллицу
+            </button>
         </p>
 
         <p><a href="#top">К началу страницы</a></p>

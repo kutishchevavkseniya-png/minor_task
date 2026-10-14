@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM_JS. Считываем информацию из DOM</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
 </head>
 <body>
@@ -34,12 +34,19 @@
             <p class="passport-data passport-issuer">Учебным отделом</p>
             <p class="passport-data passport-issue-date">01.01.2026</p>
             <p class="passport-data passport-department">000-000</p>
-            <p class="passport-data passport-signature">KAK</p>
-            <p class="passport-data passport-surname"><span id="passport-surname">Кутищева</span></p>
-            <p class="passport-data passport-name"><span id="passport-name">Ксения</span></p>
+            <p class="passport-data passport-signature">КАК</p>
+
+            <p class="passport-data passport-surname">
+                <span id="passport-surname">Кутищева</span>
+            </p>
+            <p class="passport-data passport-name">
+                <span id="passport-name">Ксения</span>
+            </p>
             <p class="passport-data passport-patronymic">Андреевна</p>
-            <p class="passport-data passport-gender">—</p>
-            <p class="passport-data passport-birth">01.08.<span id="passport-year">2007</span></p>
+            <p class="passport-data passport-gender">Жен.</p>
+            <p class="passport-data passport-birth">
+                01.08.<span id="passport-year">2007</span>
+            </p>
             <p class="passport-data passport-place">Москва</p>
         </div>
 
@@ -47,9 +54,16 @@
             <h2>Получение данных из DOM</h2>
             <figure>
                 <a href="images/dom-console.png" target="_blank" rel="noopener">
-                    <img src="images/dom-console.png" alt="Консоль браузера: получение фамилии Кутищева, имени Ксения и года рождения 2007 из DOM" style="display: block; width: 100%; height: auto;">
+                    <img
+                        src="images/dom-console.png"
+                        alt="Консоль браузера: получение фамилии, имени и года рождения из DOM"
+                        style="display: block; width: 100%; height: auto;"
+                    >
                 </a>
-                <figcaption>Результаты чтения фамилии, имени и года рождения. Нажмите на скриншот, чтобы увеличить.</figcaption>
+                <figcaption>
+                    Результаты чтения фамилии, имени и года рождения.
+                    Нажмите на скриншот, чтобы увеличить.
+                </figcaption>
             </figure>
         </section>
 

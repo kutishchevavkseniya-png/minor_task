@@ -1,3 +1,4 @@
+
 :root {
     --background: #fffaf7;
     --surface: #ffffff;
@@ -277,36 +278,114 @@ td.model-cell {
     background-size: 48px 48px;
 }
 
+/* ПАСПОРТ */
 
-/* Изображение разворота; данные остаются текстовыми элементами DOM. */
 .passport-spread {
     position: relative;
-    width: min(100%, 600px);
+
+    width: 100%;
+    max-width: 600px;
+
     aspect-ratio: 378 / 529;
-    margin: 24px auto;
-    background: url("images/passport-background.jpg") center / 100% 100% no-repeat;
+
+    margin: 30px auto;
+
+    background-image: url("images/passport-background.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
     font-family: "Times New Roman", serif;
-    font-size: clamp(10px, 2.8vw, 18px);
-    color: #191919;
+    font-size: clamp(9px, 2vw, 15px);
+    color: #252020;
 }
+
+/* Текст поверх паспорта */
 
 .passport-spread .passport-data {
     position: absolute;
     margin: 0;
-    line-height: 1.15;
-    font-weight: 700;
+    padding: 0;
+
+    line-height: 1.1;
+    font-size: inherit;
+    font-weight: 500;
+    color: #252020;
 }
 
-.passport-issuer { top: 13.5%; left: 24%; width: 64%; text-align: center; }
-.passport-issue-date { top: 22.2%; left: 19%; }
-.passport-department { top: 22.2%; left: 62%; }
-.passport-signature { top: 38.7%; left: 70%; font-style: italic; }
-.passport-surname { top: 57.2%; left: 47%; }
-.passport-name { top: 64%; left: 47%; }
-.passport-patronymic { top: 68%; left: 47%; }
-.passport-gender { top: 71.5%; left: 38%; }
-.passport-birth { top: 71.5%; left: 61%; }
-.passport-place { top: 76%; left: 47%; }
+/* Кем выдан */
+
+.passport-issuer {
+    top: 12%;
+    left: 10%;
+    width: 72%;
+}
+
+/* Дата выдачи */
+
+.passport-issue-date {
+    top: 23%;
+    left: 9%;
+}
+
+/* Код подразделения */
+
+.passport-department {
+    top: 23%;
+    left: 40%;
+}
+
+/* Подпись */
+
+.passport-signature {
+    top: 39%;
+    left: 67%;
+    font-style: italic;
+}
+
+/* Фамилия */
+
+.passport-surname {
+    top: 57.5%;
+    left: 35%;
+}
+
+/* Имя */
+
+.passport-name {
+    top: 64.5%;
+    left: 35%;
+}
+
+/* Отчество */
+
+.passport-patronymic {
+    top: 68.5%;
+    left: 35%;
+}
+
+/* Пол */
+
+.passport-gender {
+    top: 73%;
+    left: 35%;
+}
+
+/* Дата рождения */
+
+.passport-birth {
+    top: 73%;
+    left: 51%;
+}
+
+/* Место рождения */
+
+.passport-place {
+    top: 78%;
+    left: 35%;
+}
+
+/* ОСТАЛЬНЫЕ СТИЛИ */
 
 code,
 pre {
